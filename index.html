@@ -44,9 +44,16 @@ details summary{cursor:pointer;color:var(--blue)}
 #lb{position:fixed;inset:0;background:#000c;display:none;align-items:center;justify-content:center;padding:16px;z-index:9}
 #lb img{max-height:95vh;width:auto}
 @media (max-width:640px){.hero{grid-template-columns:1fr}}
+a{color:var(--blue)}
+#theme{position:fixed;top:12px;right:12px;z-index:8;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);font-size:1.2rem;cursor:pointer;box-shadow:0 2px 6px #0002}
 </style>
+<script>
+// 套用上次選的主題，放 head 避免閃白
+try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+</script>
 </head>
 <body>
+<button id="theme" type="button" aria-label="切換深淺色主題" title="切換深淺色主題"></button>
 <main>
 <h1>ちいかわクリニック（吉伊卡哇診所）第1彈整理</h1>
 <p class="sub">資料來源：<a href="https://chiikawa-info.jp/p26/chiikawaclinic/index.html">chiikawa-info.jp 官方頁面</a>（2026/11/12 擷取）。價格皆為日圓含稅。店舖可能依現場狀況調整限購數，出發前請再確認官方 X / Instagram。</p>
@@ -67,7 +74,7 @@ details summary{cursor:pointer;color:var(--blue)}
   　<a href="https://chiikawa-info.jp/p26/chiikawaclinic/umeda.html" target="_blank">官方梅田說明頁</a>　<a href="https://x.com/kiddyevent" target="_blank">KIDDY LAND 活動 X</a></p>
   <div class="tw"><table>
     <tr><th>你要去的日期</th><th>方式</th><th>時間</th></tr>
-    <tr><td>11/29（日）、11/30（一）</td><td><b class="r">抽選</b>（抽籤）</td><td>報名：<mark><b>11/13（五）10:00 ～ 11/15（日）23:59</b></mark>（就是明天！）<br>公布：11/16（一）中（LINE 我的票券頁查看）<br>二次先搶（有空位時）：<b>11/17（二）20:00</b> 起（名古屋/大阪梅田）</td></tr>
+    <tr><td>11/29（日）、11/30（一）</td><td><b class="r">抽選</b>（抽籤）</td><td>報名：<mark><b>11/13（五）10:00 ～ 11/15（日）23:59</b></mark><br>公布：11/16（一）中（LINE 我的票券頁查看）<br>二次先搶（有空位時）：<b>11/17（二）20:00</b> 起（名古屋/大阪梅田）</td></tr>
     <tr><td>12/1（二）～ 12/6（日）</td><td>先搶</td><td>每天 <b>前一日 18:00</b> 開放，例：12/1 的票 11/30 18:00 開搶</td></tr>
   </table></div>
   <ul>
@@ -243,6 +250,17 @@ const lb = document.getElementById('lb');
 document.addEventListener('click', e => {
   if (e.target.matches('.item img')) { lb.querySelector('img').src = e.target.src; lb.style.display = 'flex'; }
 });
+// 深淺色切換：沒選過就跟系統設定
+const btn = document.getElementById('theme');
+const isDark = () => (document.documentElement.dataset.theme || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')) === 'dark';
+const paint = () => btn.textContent = isDark() ? '☀️' : '🌙';
+btn.onclick = () => {
+  const t = isDark() ? 'light' : 'dark';
+  document.documentElement.dataset.theme = t;
+  try { localStorage.setItem('theme', t); } catch (e) {}
+  paint();
+};
+paint();
 </script>
 </body>
 </html>
