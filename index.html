@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>吉伊卡哇診所 第1彈</title>
+<title>吉伊卡哇新品整理（診所第1彈／伏見店3週年）</title>
 <!-- ponytail: separate links so one missing family doesn't break the others -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,6 +45,9 @@ details summary{cursor:pointer;color:var(--blue)}
 #lb img{max-height:95vh;width:auto}
 @media (max-width:640px){.hero{grid-template-columns:1fr}}
 a{color:var(--blue)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 4px;padding-right:48px}
+.tabs a{text-decoration:none;padding:6px 16px;border-radius:99px;border:1px solid var(--line);background:var(--card);color:var(--ink);font-weight:700}
+.tabs a.on{background:var(--pink);border-color:var(--pink);color:#fff}
 #theme{position:fixed;top:12px;right:12px;z-index:8;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);font-size:1.2rem;cursor:pointer;box-shadow:0 2px 6px #0002}
 </style>
 <script>
@@ -55,6 +58,11 @@ try { const t = localStorage.getItem('theme'); if (t) document.documentElement.d
 <body>
 <button id="theme" type="button" aria-label="切換深淺色主題" title="切換深淺色主題"></button>
 <main>
+<nav class="tabs">
+  <a href="#clinic" data-tab="clinic">🏥 診所第1彈</a>
+  <a href="#fushimi" data-tab="fushimi">⛩️ 伏見店 3週年</a>
+</nav>
+<section id="clinic">
 <h1>ちいかわクリニック（吉伊卡哇診所）第1彈整理</h1>
 <p class="sub">資料來源：<a href="https://chiikawa-info.jp/p26/chiikawaclinic/index.html">chiikawa-info.jp 官方頁面</a>（2026/11/12 擷取；入店規則依 <a href="https://x.com/chiikawa_land">@chiikawa_land</a> 11/19、11/23 公告更新）。價格皆為日圓含稅。店舖可能依現場狀況調整限購數，出發前請再確認官方 X / Instagram。</p>
 
@@ -161,6 +169,63 @@ try { const t = localStorage.getItem('theme'); if (t) document.documentElement.d
 <h2>商品一覽</h2>
 <p class="sub">點圖可放大。圖片是官方頁面截圖，每張內含該商品所有款式。</p>
 <div id="lists"></div>
+</section>
+
+<section id="fushimi" hidden>
+<h1>ちいかわもぐもぐ本舗 京都伏見店 3週年紀念商品</h1>
+<p class="sub">資料來源：<a href="https://www.chiikawamogumogu.jp/products/product-2649/" target="_blank">もぐもぐ本舗 官方商品頁</a>、<a href="https://www.chiikawamogumogu.jp/stores/fushimi/" target="_blank">伏見店官方頁</a>、<a href="https://x.com/chiikawamgmg" target="_blank">@chiikawamgmg</a>（2026/11/23 擷取）。價格皆為日圓含稅。官方註明「部分商品有購買限制」，但沒寫數量。</p>
+
+<div class="hero">
+  <img src="img/fushimi/fs_00_main.jpg" alt="伏見店3週年限定商品主視覺">
+  <div class="card">
+    <h3 style="margin-top:0">基本資訊</h3>
+    <p><b>11/13（五）發售</b>（伏見店 11/14 滿 3 週年）<br><a href="https://chiikawamogumogu.shop/" target="_blank">もぐもぐ本舗線上商店</a>同步販售</p>
+    <p>📍 京都市伏見区深草稲荷中之町46-1（伏見稻荷參道上）<br>🕘 <b>9:30–17:30</b> · JR 稲荷駅走 5 分／京阪伏見稲荷駅走 10 分 <a class="map" href="https://www.google.com/maps/search/?api=1&query=ちいかわもぐもぐ本舗+京都伏見店" target="_blank" title="Google 地圖">📍</a></p>
+    <p>店舖共通 <b>9 款</b>（川越、小樽也有）＋ <b>伏見店限定 14 款</b></p>
+  </div>
+</div>
+
+<h2>入店規則</h2>
+<div class="card alert">
+  <ul>
+    <li>11/13–11/15：抽選預約（已結束）。</li>
+    <li>11/16–11/20：LINE 數位票先搶（每天前一晚 20:00）（已結束）。</li>
+    <li><b>平日：一般入店</b>（官方：「上記期間以外は通常入店」）。</li>
+    <li class="r"><b>週六、日、國定假日：仍要先在 LINE 取得數位票</b>（每人 1 張、先搶，前一晚 20:00 開放，沒有位置限制）。</li>
+    <li>人多時平日也可能臨時限制 → 當天早上看 <a href="https://x.com/chiikawamgmg" target="_blank">@chiikawamgmg</a>。</li>
+  </ul>
+  <p><a href="https://lin.ee/Di0FUyj" target="_blank" style="display:inline-block;background:#06c755;color:#fff;padding:8px 18px;border-radius:99px;text-decoration:none">もぐもぐ本舗 LINE 官方帳號</a>　<a href="https://www.chiikawamogumogu.jp/2026/11/11/post-2807/" target="_blank">官方入店公告</a></p>
+</div>
+
+<h2>⚠ 缺貨中（官方 X 11/22）</h2>
+<div class="card alert">
+  <p>伏見店目前缺貨，<b>會再補貨但日期未定</b>：</p>
+  <ul>
+    <li><b>舞妓吉伊卡哇吊飾、藝妓兔兔吊飾</b>（3週年限定）</li>
+    <li>鳥居托特包、相良刺繡小包（吉伊卡哇）、伴手禮餅乾、吉伊卡哇牛奶麵包（常態商品）</li>
+  </ul>
+  <p class="sub">去之前看 <a href="https://x.com/chiikawamgmg/status/2124451752644878488" target="_blank">官方缺貨／補貨公告</a>；很想要的話線上商店也有賣。</p>
+</div>
+
+<h2>伏見店 3週年滿額贈（11/13 起，送完為止）</h2>
+<div class="card">
+  <div class="tw"><table>
+    <tr><th>單次結帳金額（含稅）</th><th>贈品</th></tr>
+    <tr><td><b>¥3,000</b> 以上</td><td>壓克力連結吊飾（全 8 種隨機 1 個）</td></tr>
+    <tr><td><b>¥8,000</b> 以上</td><td>壓克力連結吊飾 ＋ 造型手帕毛巾（直徑約 24cm）</td></tr>
+  </table></div>
+  <ul class="sub">
+    <li>只限伏見店實體購買；每人每次結帳各 1 個；<b>不可分開結帳</b>。</li>
+    <li>線上商店另有滿 ¥8,000（不含運費）送餐具組，和店舖贈品不同。</li>
+  </ul>
+  <details><summary>看原圖（滿額贈條件）</summary><img src="img/fushimi/fs_24_novelty.jpg" alt="伏見店3週年滿額贈" loading="lazy"></details>
+  <details><summary>看原圖（贈品實物）</summary><img src="img/fushimi/fs_25_novelty_items.jpg" alt="壓克力連結吊飾與手帕毛巾" loading="lazy"></details>
+</div>
+
+<h2>商品一覽</h2>
+<p class="sub">點圖可放大。每張圖內含該商品所有款式。</p>
+<div id="fslists"></div>
+</section>
 
 <div class="card sub" style="margin-top:3em">
   <b>免責聲明・版權說明</b>
@@ -171,7 +236,9 @@ try { const t = localStorage.getItem('theme'); if (t) document.documentElement.d
       <a href="https://chiikawa-info.jp/p26/chiikawaclinic/index.html" target="_blank">ちいかわクリニック 官方頁面</a>／
       <a href="https://chiikawa-info.jp/p26/chiikawaclinic/umeda.html" target="_blank">大阪梅田 官方頁面</a>／
       <a href="https://chiikawa-info.jp/p26/chiikawaclinic/kazan.html" target="_blank">華山 官方頁面</a>／
-      <a href="https://chiikawamarket.jp/" target="_blank">ちいかわマーケット（吉伊卡哇線上商店）</a></li>
+      <a href="https://chiikawamarket.jp/" target="_blank">ちいかわマーケット（吉伊卡哇線上商店）</a>／
+      <a href="https://www.chiikawamogumogu.jp/products/product-2649/" target="_blank">もぐもぐ本舗 3週年官方頁</a>／
+      <a href="https://chiikawamogumogu.shop/" target="_blank">もぐもぐ本舗線上商店</a></li>
     <li>如權利人認為本頁內容有侵權疑慮，請至 <a href="https://github.com/EnnisHsiao/Chiikawa_NewInfo_2611/issues" target="_blank">GitHub Issues</a> 留言聯絡我，我會儘速撤除相關內容或關閉網頁。</li>
   </ul>
 </div>
@@ -246,11 +313,55 @@ const S = [
   ["026_ck_261127_02kjgn","ないぞういろいろマスコット","內臟造型吊飾","1次¥990","共9款","每天5次"],
  ]},
 ];
+// 伏見店 3週年：[file, name, zh, price, variants, note]（官方未公布個別限購）
+const F = [
+ {t:"⛩️ 伏見店限定（14 款）", items:[
+  ["fs_10_maiko_mascot","舞妓さんなみんなのマスコット","舞妓吉伊卡哇・舞妓小八・藝妓兔兔（彈三味線）吊飾","各¥2,530","共3款","⚠ 吉伊卡哇、兔兔 11/22 缺貨"],
+  ["fs_11_acrylic3","舞妓さんなみんなの3連アクリルチャーム","三連壓克力吊飾","¥1,320","共1款",""],
+  ["fs_12_round_kinchaku","舞妓さんなみんなのまるい巾着","圓形束口袋（正反面）","¥1,320","共1款",""],
+  ["fs_13_clearfile","舞妓さんなみんなの手触りのいいクリアファイル","霧面資料夾（正反面）","¥440","共1款",""],
+  ["fs_14_mt","舞妓さんなみんなのマスキングテープ","紙膠帶","¥605","共1款",""],
+  ["fs_15_fusen","舞妓さんなみんなのパタパタふせん","摺疊便利貼","¥715","共1款",""],
+  ["fs_16_sticker","舞妓さんなみんなの4枚セットステッカー","貼紙 4 張組","¥770","共1款",""],
+  ["fs_17_badge","舞妓さんなみんなの大きめ缶バッジ","大罐徽章","¥385","共1款",""],
+  ["fs_18_ecobag","舞妓さんなみんなのポケッタブルエコバッグ","可收納環保袋（正反面）","¥1,650","共1款",""],
+  ["fs_19_tee_inari","Tシャツ 稲荷なみんな","狐狸造型 T 恤（白，M/L/XL）","¥3,850","共1款",""],
+  ["fs_20_tee_maiko","Tシャツ 舞妓さんなみんな","舞妓 T 恤（黑，M/L/XL）","¥3,850","共1款",""],
+  ["fs_21_parka","ジップパーカー 舞妓さんなみんな","拉鍊連帽外套（M/L/XL，正反面）","¥6,600","共1款",""],
+  ["fs_22_shoulder","巾着ショルダーバッグ 舞妓さんなみんな","束口斜背包（深藍）","¥2,750","共1款",""],
+  ["fs_23_tote","トートバッグ 舞妓さんなみんな","托特包（灰）","¥3,300","共1款",""],
+ ]},
+ {t:"🏯 店舖共通（9 款，伏見・川越・小樽；線上商店也有）", items:[
+  ["fs_01_wasou_mascot","和装なみんなのマスコット","和服吊飾（吉伊卡哇、小八、兔兔、飛鼠、栗子饅頭、海獺、風獅爺、古書店店主）","各¥2,310","共8款",""],
+  ["fs_02_gamaguchi","ちりめんがま口","縐綢珠扣零錢包","各¥1,540","共3款",""],
+  ["fs_03_chirimen_pouch","ちりめんポーチ","縐綢小包","各¥1,430","共3款",""],
+  ["fs_04_chirimen_kinchaku","ちりめん巾着","縐綢束口袋","各¥1,870","共3款",""],
+  ["fs_05_funagata","ふくれジャガード 舟形ポーチ","立體提花船形小包","各¥1,760","共3款",""],
+  ["fs_06_wire","ふくれジャガード ワイヤーポーチ","立體提花鐵框口金包","各¥2,860","共3款",""],
+  ["fs_07_pochette","ふくれジャガード ポシェット","立體提花斜背小包","各¥3,630","共3款",""],
+  ["fs_08_frame_mag","和装なみんなのミニフレームマグネット","迷你相框磁鐵","¥495","共1款",""],
+  ["fs_09_chochin_mag","和装なみんなのミニ提灯マグネット","迷你燈籠磁鐵","¥770","共1款",""],
+ ]},
+];
+const card = (src, n, zh, p, v, tail) =>
+  `<div class="item"><img src="${src}" loading="lazy" alt="${n}">
+   <div class="n">${n}</div><div class="zh">${zh}</div><div class="p">${p}</div>
+   <div><span class="tag">${v}</span>${tail}</div></div>`;
 document.getElementById('lists').innerHTML = S.map(s =>
   `<h3>${s.t}</h3><div class="grid">` + s.items.map(([f,n,zh,p,v,l]) =>
-    `<div class="item"><img src="img/index/${f.replace(/^(\d+)_/, '$1_')}.png" loading="lazy" alt="${n}">
-     <div class="n">${n}</div><div class="zh">${zh}</div><div class="p">${p}</div>
-     <div><span class="tag">${v}</span><span class="tag">限購：${l}</span></div></div>`).join('') + `</div>`).join('');
+    card(`img/index/${f}.png`, n, zh, p, v, `<span class="tag">限購：${l}</span>`)).join('') + `</div>`).join('');
+document.getElementById('fslists').innerHTML = F.map(s =>
+  `<h3>${s.t}</h3><div class="grid">` + s.items.map(([f,n,zh,p,v,note]) =>
+    card(`img/fushimi/${f}.jpg`, n, zh, p, v, note ? `<span class="tag r">${note}</span>` : '')).join('') + `</div>`).join('');
+// 頁籤：#clinic / #fushimi，可直接分享連結
+const route = () => {
+  const t = location.hash === '#fushimi' ? 'fushimi' : 'clinic';
+  ['clinic','fushimi'].forEach(id => document.getElementById(id).hidden = id !== t);
+  document.querySelectorAll('.tabs a').forEach(a => a.classList.toggle('on', a.dataset.tab === t));
+  document.title = t === 'fushimi' ? '吉伊卡哇 伏見店3週年' : '吉伊卡哇診所 第1彈';
+};
+addEventListener('hashchange', () => { route(); scrollTo(0, 0); });
+route();
 const lb = document.getElementById('lb');
 document.addEventListener('click', e => {
   if (e.target.matches('.item img')) { lb.querySelector('img').src = e.target.src; lb.style.display = 'flex'; }
